@@ -11,6 +11,7 @@ import { registerSitemapRoutes } from "./sitemap";
 import { registerMediaRoutes } from "./media";
 import { registerAuthConfigRoutes } from "./auth-config";
 import { registerTurnstileRoutes } from "./turnstile";
+import { registerCliRoutes } from "./cli";
 
 // 集中注册所有 `/api/*` 路由，避免入口文件散落多个 register 调用。
 export function registerApiRoutes(app: Hono) {
@@ -26,5 +27,6 @@ export function registerApiRoutes(app: Hono) {
   registerMediaRoutes(app);
   registerAuthConfigRoutes(app);
   registerTurnstileRoutes(app);
+  registerCliRoutes(app);
 }
 
