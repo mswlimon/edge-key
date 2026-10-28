@@ -278,6 +278,9 @@ function handlePreviewKeydown(event: KeyboardEvent) {
 }
 
 const isFreeOrder = computed(() => {
+  if (product && Number(product.price) === 0) {
+    return true;
+  }
   return discountPreview.valid && discountPreview.finalAmount === 0;
 });
 
